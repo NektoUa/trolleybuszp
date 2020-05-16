@@ -3,16 +3,15 @@ let arrA = 0;
 let k = 0;
 
 function makeMin() {
-    for (let i = 0; i < a.length; i++) {
+    a.forEach(elem => {
         let imag = document.createElement('img');
         imag.classList.add("img-12-min");
-        if (i == arrA) {
-            imag.classList.add("active-img");
-        }
-        imag.src = './images/maps/' + a[i][0];
-        imag.alt = a[i][1];
+        if (elem == arrA) imag.classList.add("active-img");
+        imag.src = './images/maps/' + elem[0];
+        imag.alt = elem[1];
         document.querySelector('div-12-wrapper').appendChild(imag);
     }
+    )
 }
 
 function removE(event) {
