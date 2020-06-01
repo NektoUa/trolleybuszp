@@ -30,7 +30,7 @@ function touchImg(event) {
     let imge = './images/maps/';
     let wrap = event.srcElement;
     let wA = wrap.attributes[1].nodeValue
-    for (let i = 0; i < a.length; i++) {
+    for (let i in a) {
         if (wA == imge + a[i][0]) {
             arrA = i;
         }
@@ -41,7 +41,7 @@ function touchImg(event) {
 function nextImg(event) {
     removE();
     arrA++;
-    if (arrA == (a.length)) {
+    if (arrA === (a.length)) {
         arrA = 0;
     }
     inHTML(arrA);
